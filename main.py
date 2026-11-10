@@ -50,10 +50,10 @@ EMOTION_EMOJIS = {
 """
 2. Preprocess the upcoming text
 Cleans raw text so it matches the format used while training.
-A. Convert the text to lowercase. -done
-B. Remove apostrophes (e.g can't -> cant). -done
-C. Remove Special Characters and Punctuation. -done
-D. Remove extra spaces -done
+A. Convert the text to lowercase. 
+B. Remove apostrophes (e.g can't -> cant). 
+C. Remove Special Characters and Punctuation. 
+D. Remove extra spaces 
 """
 
 def preprocess_text(text: str)->str:
@@ -66,8 +66,8 @@ def preprocess_text(text: str)->str:
 
 """
 3. Request and Response Schemas
-A. Text Input -> Input schema the text sent by user. -done
-B. Prediciton Response -> Output schema the emotion to predict. -done
+A. Text Input -> Input schema the text sent by user. 
+B. Prediciton Response -> Output schema the emotion to predict. 
 C. Health Response (Server health check)
 """
 
@@ -92,7 +92,7 @@ class HealthResponse(BaseModel):
 
 """
 4. Model Loading and LifeSpan Management
-Load the model and toknizer once the server starts up.
+Load the model and tokenizer once the server starts up.
 """
 dl_model = {} #{1. BiGRU, 2. Tokenizer}-> True , {} -> False
 
