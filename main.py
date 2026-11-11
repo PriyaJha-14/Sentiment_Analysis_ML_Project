@@ -1,4 +1,3 @@
-
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
 from fastapi.staticfiles import StaticFiles
@@ -11,8 +10,6 @@ from keras.models import load_model
 import numpy as np
 import pickle
 import re
-
-
 
 
 """
@@ -104,9 +101,9 @@ async def lifespan(app: FastAPI):
         dl_model["Tokenizer"] = pickle.load(file)
     print('Model are loaded successfully...')   
 
-    yield #Pause, model is laoded and server is running and at this point model wait karega for request
+    yield 
 
-    dl_model.clear() #Ek baar server band ho gaya uske baad model ko memory se hata do.
+    dl_model.clear() 
                
 
 """
